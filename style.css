@@ -1,0 +1,486 @@
+
+
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('./mojang/Mojang-Bold.ttf') format('truetype'); /* Replace with your Minecraft font file path */
+        }
+
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Minecraft', sans-serif;
+        }
+
+        /* Style for the video background */
+        #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+        #video-bg1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+            filter: brightness(60%);
+        }
+
+        /* Style for the navigation bar */
+        .navbar ul {
+           list-style-type: none;
+           display: flex;
+           justify-content: center;
+           margin-top: 10px;
+        }
+
+       .navbar ul li {
+          margin: 0 10px;
+        }
+
+       .navbar ul li a {
+           display: inline-block;
+           padding: 10px 30px;
+           color: #fff;
+           text-decoration: none;
+           background-color: #262423; 
+           border: 2px solid #8b8b8b; 
+           border-radius: 1px; 
+           box-shadow: 0 4px #2c2c2c; 
+           transition: transform 0.1s ease-in-out, background-color 0.3s;
+       }
+
+       /* Hover effect similar to Minecraft buttons */
+       .navbar ul li a:hover {
+            background-color: #555555; /* Lighter gray on hover */
+            border-color: #aaaaaa; /* Light gray border on hover */
+            box-shadow: 0 4px #444444;
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Active/Clicked state similar to Minecraft buttons */
+        .navbar ul li a:active {
+            box-shadow: none;
+            transform: translateY(4px); /* Simulate button press */
+        }
+
+        /* Main content style */
+        .content {
+            display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh;
+    gap: 20px;
+        }
+
+        .welcome-box {
+            background-color: #262423; /* Dark gray background */
+            border: 2px solid #8b8b8b; /* Border similar to Minecraft buttons */
+            border-radius: 1px; /* Slight rounded corners */
+            box-shadow: 0 6px #2c2c2c;
+            max-width: 600px;
+            color: #fff;
+            padding: 20px;
+            word-spacing: 7px;
+        }
+
+        .welcome-box h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .welcome-box p {
+            font-size: 15px;
+            padding: 8px;
+            line-height: 1.4;
+        }
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.profile-card {
+    background-color: #262423; /* Dark gray background */
+    border: 2px solid #8b8b8b; /* Border similar to Minecraft buttons */
+    border-radius: 1px; /* Slight rounded corners */
+    box-shadow: 0 6px #2c2c2c;
+    padding: 20px;
+    width: 60%;
+    text-align: left;
+}
+
+.profile-card img {
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    float: left;
+}
+
+.profile-card h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #B4C7A0; /* Minecraft green */
+}
+
+.profile-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #dcdcdc;
+}
+
+/* Bio Section */
+.bio {
+    background-color: #262423; /* Dark gray background */
+    border: 2px solid #8b8b8b; /* Border similar to Minecraft buttons */
+    border-radius: 1px; /* Slight rounded corners */
+    box-shadow: 0 6px #2c2c2c;
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+.bio h2 {
+    font-size: 22px;
+    color: #B4C7A0; /* Minecraft green */
+    margin-bottom: 10px;
+}
+
+.bio p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+        .main-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .section-box {
+            background-color: #2A2D2E;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 6px #1F1F1F;
+            margin-bottom: 20px;
+            border: 2px solid #8b8b8b;
+        }
+
+        .section-box h2 {
+            color: #B4C7A0;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 8px;
+            word-spacing: 6px;
+        }
+
+        .goals-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .goals-list li {
+            background-color: #3D3D3D;
+            color: #C0C0C0;
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 5px;
+            box-shadow: inset 0 2px #555;
+            border: 1px solid #4C4C4C;
+            padding: 8px;
+            word-spacing: 8px;
+        }
+
+        /* Quote Section */
+        .quote-box {
+            background-color: #2A2D2E;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 6px #1F1F1F;
+            border: 2px solid #8b8b8b;
+        }
+
+        .quote-box p {
+            font-style: italic;
+            color: #B4C7A0;
+            padding: 8px;
+            word-spacing: 6px;
+        }
+        /* Main content container for Projects section */
+.main-container-proj {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Projects title */
+.main-container-proj h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #B4C7A0;
+    text-shadow: 2px 2px #1F1F1F;
+}
+
+/* Project cards layout */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Style for each project card */
+.project-card {
+    background-color: #2A2D2E;
+    border: 2px solid #8b8b8b;
+    border-radius: 8px;
+    box-shadow: 0 6px #1F1F1F;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 10px #333333;
+}
+
+/* Project image */
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px #2c2c2c;
+}
+
+/* Project title */
+.project-card h3 {
+    font-size: 20px;
+    color: #B4C7A0;
+    margin-bottom: 10px;
+}
+
+/* Project description and technologies */
+.project-card p {
+    font-size: 14px;
+    color: #C0C0C0;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+/* GitHub and Live Demo links */
+.project-card a {
+    color: #B4C7A0;
+    text-decoration: none;
+    background-color: #262423;
+    padding: 5px 15px;
+    border: 2px solid #8b8b8b;
+    border-radius: 3px;
+    box-shadow: 0 4px #2c2c2c;
+    margin: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Hover and active effects for links */
+.project-card a:hover {
+    background-color: #555555;
+    border-color: #aaaaaa;
+    transform: translateY(-2px);
+}
+
+.project-card a:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+/* Footer style */
+.footer {
+    background-color: rgba(34, 139, 34, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    border-top: 2px solid #8B4513;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.main-container-skill {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Skills title */
+.main-container-skill h2 {
+    font-size: 32px;
+    color: #B4C7A0;
+    text-shadow: 2px 2px #1F1F1F;
+    margin-bottom: 20px;
+}
+
+/* Skills list */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual skill */
+.skill {
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Skill bar container */
+.skill-bar {
+    background-color: #3D3D3D;
+    border-radius: 3px;
+    position: relative;
+    margin-top: 5px;
+    height: 25px;
+    width: 100%;
+    box-shadow: inset 0 2px #555;
+}
+
+/* Skill progress */
+.skill-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--progress);
+    background-color: var(--color);
+    border-radius: 3px;
+    box-shadow: 0 4px #222;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Percentage text inside bar */
+.skill-bar::after {
+    content: attr(style);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* Main container style */
+.main-container-cont {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #262423;
+    border: 3px solid #4d4d4d;
+    box-shadow: 0 8px #1a1a1a;
+    border-radius: 3px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Heading style */
+.main-container-cont h2 {
+    font-size: 36px;
+    color: #ffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000;
+}
+
+/* Contact Form style */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    color: #b4c7a0;
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    border: 2px solid #4d4d4d;
+    border-radius: 3px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #777;
+}
+
+/* Submit button styling */
+.contact-form button {
+    padding: 10px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 2px solid #555;
+    border-radius: 3px;
+    font-size: 16px;
+    box-shadow: 0 4px #000;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #444444;
+    border-color: #777777;
+    transform: translateY(-2px);
+}
+
+.contact-form button:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+/* Contact Details styling */
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details h3 {
+    color: #ffff;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    color: #b4c7a0;
+    font-size: 16px;
+}
+
+.contact-details a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
